@@ -21,9 +21,11 @@ const result = document.querySelector('.result')
         // const {temp_max:max, temp_min:min,feels_like} = data.main
         const {temp_max:max, temp_min:min,feels_like, humidity:hum} = data.main
         const {description} = data.weather[0]
+        const {lon, lat} = data.coord
         result.innerHTML = `
         <article class="card">
         <h3>${name}, ${country}</h3>
+        <p>Long: ${lon} &nbsp;  | &nbsp; Lat: ${lat}</p>
         <p>${description}</p>
         <p>min temp: ${min}&#8457;</p>
         <p>max temp: ${max}&#8457;</p>
